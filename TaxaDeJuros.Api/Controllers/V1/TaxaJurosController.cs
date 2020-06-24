@@ -1,17 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using TaxaDeJuros.Dominio.Configuracoes;
-using TaxaDeJuros.Dominio.Util;
 
 namespace TaxaDeJuros.Api.Controllers.V1
 {
-    [ApiController]
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/taxaJuros")]
-    public class TaxaJurosController : ControllerBase
+    public class TaxaJurosController : ControllerPadrao<TaxaJurosController>
     {
         private readonly Parametros _parametros;
 
-        public TaxaJurosController(Parametros parametros)
+        public TaxaJurosController(ILogger<TaxaJurosController> logger,
+                                   Parametros parametros)
+            : base(logger)
         {
             _parametros = parametros;
         }
@@ -19,8 +21,14 @@ namespace TaxaDeJuros.Api.Controllers.V1
         [HttpGet]
         public IActionResult Get()
         {
-            var respota = new ContratoResposta(_parametros.TaxaDeJuros);
-            return Ok(respota);
+            try
+            {
+                return RetornoSucesso(_parametros.TaxaDeJuros);
+            }
+            catch (Exception ex)
+            {
+                return RetornoErro(ex, Constantes.MENSAGEM_ERRO_TAXA_DE_JUROS);
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
 {
     public class Parametros
     {
-        public decimal TaxaDeJuros { get; set; }
+        public virtual decimal TaxaDeJuros { get; set; }
 
         public Parametros() { }
 
