@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxaDeJuros.Api", "TaxaDeJuros.Api\TaxaDeJuros.Api.csproj", "{937C5E8D-54DF-4AC9-AD42-14CC12872A1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - API", "01 - API", "{512FC1B7-8D81-4595-8401-C38211B1021A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Dominio", "02 - Dominio", "{784C5745-890D-4B80-BAF8-A0AA4FDDB127}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Infra", "03 - Infra", "{C079BEFF-D305-40E2-8C6E-92CCAA284880}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Testes", "04 - Testes", "{21259F50-FC89-4254-967F-6FE98F2B7F55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaDeJuros.Dominio", "TaxaDeJuros.Dominio\TaxaDeJuros.Dominio.csproj", "{F5B6F68E-0913-4AA0-8742-D3B480954742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaDeJuros.Infra", "TaxaDeJuros.Infra\TaxaDeJuros.Infra.csproj", "{A219502E-266A-439C-9DA6-2138574A4589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaDeJuros.Tests", "TaxaDeJuros.Tests\TaxaDeJuros.Tests.csproj", "{ACBBB2CB-6F2F-4DE3-81D3-5101E09FAB23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{937C5E8D-54DF-4AC9-AD42-14CC12872A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937C5E8D-54DF-4AC9-AD42-14CC12872A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937C5E8D-54DF-4AC9-AD42-14CC12872A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937C5E8D-54DF-4AC9-AD42-14CC12872A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B6F68E-0913-4AA0-8742-D3B480954742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B6F68E-0913-4AA0-8742-D3B480954742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B6F68E-0913-4AA0-8742-D3B480954742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B6F68E-0913-4AA0-8742-D3B480954742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A219502E-266A-439C-9DA6-2138574A4589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A219502E-266A-439C-9DA6-2138574A4589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A219502E-266A-439C-9DA6-2138574A4589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A219502E-266A-439C-9DA6-2138574A4589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACBBB2CB-6F2F-4DE3-81D3-5101E09FAB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBBB2CB-6F2F-4DE3-81D3-5101E09FAB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBBB2CB-6F2F-4DE3-81D3-5101E09FAB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBBB2CB-6F2F-4DE3-81D3-5101E09FAB23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{937C5E8D-54DF-4AC9-AD42-14CC12872A1F} = {512FC1B7-8D81-4595-8401-C38211B1021A}
+		{F5B6F68E-0913-4AA0-8742-D3B480954742} = {784C5745-890D-4B80-BAF8-A0AA4FDDB127}
+		{A219502E-266A-439C-9DA6-2138574A4589} = {C079BEFF-D305-40E2-8C6E-92CCAA284880}
+		{ACBBB2CB-6F2F-4DE3-81D3-5101E09FAB23} = {21259F50-FC89-4254-967F-6FE98F2B7F55}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30295A76-2BD5-43C3-9E14-64D5DDD3F912}
+	EndGlobalSection
+EndGlobal
