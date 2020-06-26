@@ -1,0 +1,14 @@
+version: '3.0'
+networks:
+  dockertest:
+services:
+  env-taxa-juros:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-taxa-juros
+    image: api-taxa-juros-imagem:latest    
+    ports: 
+        - "5007:80"    
+    networks: 
+        - dockertest
