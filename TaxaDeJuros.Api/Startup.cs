@@ -56,6 +56,7 @@ namespace TaxaDeJuros.Api
             services.AddHealthChecks();
 
             services.ConfigurarContainer(Configuration);
+            services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_INSTRUMENTATIONKEY"]);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
