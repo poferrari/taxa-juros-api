@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using TaxaDeJuros.Dominio.Util;
+using TaxaDeJuros.Dominio.Configuracoes.Dtos;
 
 namespace TaxaDeJuros.Api.Controllers
 {
@@ -15,17 +15,16 @@ namespace TaxaDeJuros.Api.Controllers
             _logger = logger;
         }
 
-        protected OkObjectResult RetornoSucesso(object data)
+        protected OkObjectResult RetornoSucesso<E>(E resposta)
         {
-            var respota = ContratoResposta.CriarContratoRespostaSucesso(data);
-            return Ok(respota);
+            return Ok(resposta);
         }
 
         protected BadRequestObjectResult RetornoErro(Exception ex, string mensagemErro)
         {
             _logger.LogError(ex, mensagemErro);
 
-            var respota = ContratoResposta.CriarContratoRespostaErro(mensagemErro);
+            var respota = new RespostaErro(mensagemErro);
             return BadRequest(respota);
         }
     }

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using System;
 using TaxaDeJuros.Dominio.Configuracoes;
+using TaxaDeJuros.Dominio.TaxaJuros.Dtos;
 
 namespace TaxaDeJuros.Api.Controllers.V1
 {
@@ -9,13 +10,13 @@ namespace TaxaDeJuros.Api.Controllers.V1
     [Route("api/v{version:apiVersion}/taxaJuros")]
     public class TaxaJurosController : ControllerPadrao<TaxaJurosController>
     {
-        private readonly Parametros _parametros;
+        private readonly TaxaJuros _taxaJuros;
 
         public TaxaJurosController(ILogger<TaxaJurosController> logger,
-                                   Parametros parametros)
+                                   TaxaJuros taxaJuros)
             : base(logger)
         {
-            _parametros = parametros;
+            _taxaJuros = taxaJuros;
         }
 
         [HttpGet]
@@ -23,7 +24,9 @@ namespace TaxaDeJuros.Api.Controllers.V1
         {
             try
             {
-                return RetornoSucesso(_parametros.TaxaDeJuros);
+                _taxaJuros.ValidarTaxa();
+
+                return RetornoSucesso(_taxaJuros);
             }
             catch (Exception ex)
             {
