@@ -2,6 +2,8 @@
 
 API que retorna a taxa de juros
 
+* Azure App Service: https://api-taxa-juros.azurewebsites.net/swagger/index.html
+
 ### comandos Docker ###
 
 * docker build -t api-taxa-juros-imagem -f Dockerfile .
