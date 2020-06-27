@@ -23,10 +23,10 @@ API que retorna a taxa de juros
 
 * az login
 
-myResourceGroup=ApiJurosRG
-planappname=ApiJurosPlan
-webappname=api-taxa-juros
-gitrepo=https://github.com/poferrari/taxa-juros-api
+* myResourceGroup=ApiJurosRG
+* planappname=ApiJurosPlan
+* webappname=api-taxa-juros
+* gitrepo=https://github.com/poferrari/taxa-juros-api
 
 * az group create --location eastus --name $myResourceGroup
 * az appservice plan create --name $planappname --resource-group $myResourceGroup --sku FREE
