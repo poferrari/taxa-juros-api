@@ -18,3 +18,25 @@ API que retorna a taxa de juros
 
 * docker-compose up
 * docker-compose down
+
+### comandos Azure CLI ###
+
+* az login
+
+myResourceGroup=ApiJurosRG
+planappname=ApiJurosPlan
+webappname=api-taxa-juros
+gitrepo=https://github.com/poferrari/taxa-juros-api
+
+* az group create --location eastus --name $myResourceGroup
+* az appservice plan create --name $planappname --resource-group $myResourceGroup --sku FREE
+* az webapp create --name $webappname --resource-group $myResourceGroup --plan $planappname
+* az webapp deployment source config --name $webappname --resource-group $myResourceGroup --repo-url $gitrepo --branch master --manual-integration
+* echo http://$webappname.azurewebsites.net/swagger/index.html
+* az group delete --name $myResourceGroup --yes
+
+### Referências ###
+
+https://docs.microsoft.com/pt-br/cli/azure/get-started-with-azure-cli?view=azure-cli-latest
+https://docs.microsoft.com/pt-br/azure/app-service/scripts/cli-deploy-github
+https://docs.microsoft.com/pt-br/azure/app-service/scripts/cli-continuous-deployment-github
