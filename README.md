@@ -38,7 +38,7 @@ API que retorna a taxa de juros
 ### testes das API´s com Postman ###
 
 * https://www.getpostman.com/collections/32c5916a0d98eb09599b
-* Importar a collection APIJuros.postman_collection.json
+* Importar a collection testes/APIJuros.postman_collection.json
 
 ### Referências ###
 
