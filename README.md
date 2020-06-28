@@ -37,6 +37,10 @@ API que retorna a taxa de juros
 
 ### Referências ###
 
-https://docs.microsoft.com/pt-br/cli/azure/get-started-with-azure-cli?view=azure-cli-latest
-https://docs.microsoft.com/pt-br/azure/app-service/scripts/cli-deploy-github
-https://docs.microsoft.com/pt-br/azure/app-service/scripts/cli-continuous-deployment-github
+- https://docs.microsoft.com/pt-br/cli/azure/get-started-with-azure-cli?view=azure-cli-latest
+- https://docs.microsoft.com/pt-br/azure/app-service/scripts/cli-deploy-github
+- https://docs.microsoft.com/pt-br/azure/app-service/scripts/cli-continuous-deployment-github
+- https://medium.com/@nelson.souza/net-core-api-versioning-d4f869fb9052
+- https://medium.com/@renato.groffe/github-azure-app-service-deployment-automatizado-e-sem-complica%C3%A7%C3%B5es-de-web-apps-na-nuvem-4c0a0439e096
+- https://docs.microsoft.com/pt-br/visualstudio/deployment/tutorial-import-publish-settings-azure?view=vs-2019
+- https://medium.com/@renato.groffe/asp-net-core-apis-rest-na-nuvem-com-docker-e-azure-web-app-4a82f9f594a5
