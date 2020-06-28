@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "ec7488f4-8b4d-4826-a2b8-b01a1065b94c",
+		"name": "APIJuros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TaxaDeJuros",
+			"item": [
+				{
+					"name": "Obter taxa de Juros",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df9ae22f-280e-4393-b002-2b502b6901d5",
+								"exec": [
+									"pm.test(\"Status code está OK (200)\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Taxa de juros retornada com sucesso\", function () {\r",
+									"    pm.expect(pm.response.json().valor).to.equal(0.01);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-taxa-juros.azurewebsites.net/api/v1/taxaJuros",
+							"protocol": "https",
+							"host": [
+								"api-taxa-juros",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"taxaJuros"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CalculaJuros",
+			"item": [
+				{
+					"name": "Obter repositórios Git",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "14c326d7-eb92-4d60-9614-43bc78fa75ad",
+								"exec": [
+									"var repGitTaxaDeJuros = \"https://github.com/poferrari/taxa-juros-api\";\r",
+									"var repGitCalculaJuros = \"https://github.com/poferrari/calcula-juros-api\";\r",
+									"\r",
+									"pm.test(\"Status code está OK (200)\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Repositórios retornados com sucesso\", function () {\r",
+									"    pm.expect(pm.response.json().apiTaxaDeJuros).to.equal(repGitTaxaDeJuros);\r",
+									"    pm.expect(pm.response.json().apiCalculaJuros).to.equal(repGitCalculaJuros);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-calculo-juros.azurewebsites.net/api/v1/showmethecode",
+							"protocol": "https",
+							"host": [
+								"api-calculo-juros",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"showmethecode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular juros compostos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d8e0dc99-11ba-4902-952b-7b57bd750222",
+								"exec": [
+									"var valorFinalEsperado = 105.1;\r",
+									"\r",
+									"pm.test(\"Status code está Create (201)\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Cálculo realizado com sucesso\", function () {\r",
+									"    pm.expect(pm.response.json().valorFinal).to.equal(valorFinalEsperado);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api-calculo-juros.azurewebsites.net/api/v1/calculaJuros?ValorInicial=100&Meses=5",
+							"protocol": "https",
+							"host": [
+								"api-calculo-juros",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"calculaJuros"
+							],
+							"query": [
+								{
+									"key": "ValorInicial",
+									"value": "100"
+								},
+								{
+									"key": "Meses",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

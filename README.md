@@ -35,6 +35,11 @@ API que retorna a taxa de juros
 * echo http://$webappname.azurewebsites.net/swagger/index.html
 * az group delete --name $myResourceGroup --yes
 
+### testes das API´s com Postman ###
+
+* https://www.getpostman.com/collections/32c5916a0d98eb09599b
+* Importar a collection APIJuros.postman_collection.json
+
 ### Referências ###
 
 - https://docs.microsoft.com/pt-br/cli/azure/get-started-with-azure-cli?view=azure-cli-latest
